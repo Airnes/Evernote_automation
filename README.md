@@ -20,7 +20,7 @@
 
 #####Please make sure that Android SDK is installed and configured. At least one virtual/real android device must running before executing test script
 
-#--------------------------------------------------#
+#---------------------------------------#
 
 ######Pros
 1. Python support
