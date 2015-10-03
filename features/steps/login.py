@@ -43,7 +43,7 @@ def check_My_Notes_presented(context):
 	
 	message_card = context.driver.find_element_by_id('com.evernote:id/message_card_layout')
 	
-@Given('I going to login')
+@Given('I going to login on Android')
 def user_login_flow(context):
 	context.driver.launch_app()
 	context.driver.is_app_installed('com.evernote')

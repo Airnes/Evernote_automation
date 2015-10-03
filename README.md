@@ -12,5 +12,7 @@
 - pip install loremipsum
 
 ###How to run
-1. Open terminal and execute sh file "*start_server.sh*"
-2. Cd to the Features folder and run Run "*behave*"
+1. Open terminal and execute sh file "*start_$PLATFORM_server.sh*" for choosen Platform
+2. Open environment.py file and change app path
+3. Cd to the Features folder and do "*cp .behaverc $HOME*"
+4. Run Run "*behave -D platform=(iOS/Android)*"

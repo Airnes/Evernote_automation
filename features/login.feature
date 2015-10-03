@@ -10,7 +10,7 @@ Scenario: As a valid user I want to be able to login in the App
 	Then I reset my App
 
 Scenario: As a logged in user I should be able to create a Note
-	Given I going to login
+	Given I going to login on Android
 	When I touch Plus button
 	Then I should be able to write my Text Note
 	When I entered my Note
@@ -18,7 +18,7 @@ Scenario: As a logged in user I should be able to create a Note
 	Then I reset my App
 
 Scenario: As a logged in user I should be able to retrive saved Note
-	Given I going to login
+	Given I going to login on Android
 	Then I should see my saved Note
 	When I touch one of saved Notes
 	Then I should see it
