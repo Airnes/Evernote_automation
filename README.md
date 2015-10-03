@@ -9,6 +9,7 @@
 ####Python library for Appium
 - pip install Appium-Python-Client
 - pip install behave
+- pip install loremipsum
 
 ###How to run
 1. Open terminal and execute sh file "*start_server.sh*"
