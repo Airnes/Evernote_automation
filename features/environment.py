@@ -15,7 +15,7 @@ def before_feature(context,feature):
 	if platform == 'iOS':
 		app = '/Users/Airness/Projects/Evernote_automation/apps/evernote.app'
 		platformVersion = '8.4'
-		deviceName = 'iPhone6'
+		deviceName = 'iPhone 5'
 	else:
 		app = '/Users/Airness/Projects/Evernote_automation/apps/evernote.apk'
 		platformVersion = '5.1'

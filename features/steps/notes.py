@@ -66,10 +66,30 @@ def check_opened_Note(context):
 	except InvalidSelectorException:
 		print ("Wrong Note displayed")
 
+@When('I touch List of Notebooks')
+def open_list_of_Notebooks(context):
+	context.driver.find_element_by_id('List Notebooks').click()
 
+@Then('I should see a my First Notebook')
+def check_Notebooks_list(context):
+	try:
+		context.driver.find_element_by_id('List Notebooks')
+	except NoSuchElementException:
+		print ("First Notebook not found")
 
+@When('I touch Note Browser')
+def open_Notes_Browser(context):
+	try:
+		context.driver.find_element_by_id('Note browser')
+	except NoSuchElementException:
+		print ("First Notebook not found")
 
-
+@Then('I should see a Browser with Notes')
+def check_Notes_Browser(context):
+	try:
+		context.driver.find_element_by_id('Next')
+	except NoSuchElementException:
+		print ("First Notebook not found")
 
 
 

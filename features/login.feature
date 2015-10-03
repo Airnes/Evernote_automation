@@ -25,3 +25,22 @@ Scenario: As a logged in user I should be able to retrive saved Note
 	Then I should see my saved Note
 	When I touch one of saved Notes
 	Then I should see it
+
+@iOS
+Scenario: As iOS user I want to be able to login to the Evernote
+	Given I tap Authenticate button to authorise user
+	Then I need to enter my credentials
+	Then I reset my App
+
+@iOS
+Scenario: As iOS user I want to be able to check my Notebooks
+	Given I going to login on iOS
+	When I touch List of Notebooks
+	Then I should see a my First Notebook
+	Then I reset my App
+
+@iOS
+Scenario: As iOS user I want to be able to check my Notes
+	Given I going to login on iOS
+	When I touch Note Browser
+	Then I should see a Browser with Notes
