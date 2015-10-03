@@ -12,7 +12,9 @@
 - pip install loremipsum
 
 ###How to run
-1. Open terminal and execute sh file "*start_$PLATFORM_server.sh*" for choosen Platform
-2. Open environment.py file and change app path
+1. Open environment.py,start_$PLATFORM_server.sh files and change app path
+2. Open terminal and execute sh file "*start_$PLATFORM_server.sh*" for choosen Platform
 3. Cd to the Features folder and do "*cp .behaverc $HOME*"
-4. Run Run "*behave -D platform=(iOS/Android)*"
+4. Run "*behave -D platform=iOS or Android* --tags @iOS or Android"
+
+#####Please make sure that Android SDK is installed and configured. At lease one virtual android device must Run before executint test script

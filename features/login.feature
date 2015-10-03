@@ -1,5 +1,6 @@
 Feature: Login to Evernote
-	
+
+@Android	
 Scenario: As a valid user I want to be able to login in the App
 	Given user on the Welcome screen
 	When I click on the Sign In button
@@ -9,6 +10,7 @@ Scenario: As a valid user I want to be able to login in the App
 	Then I should see All my Notes
 	Then I reset my App
 
+@Android
 Scenario: As a logged in user I should be able to create a Note
 	Given I going to login on Android
 	When I touch Plus button
@@ -17,6 +19,7 @@ Scenario: As a logged in user I should be able to create a Note
 	Then I should be able to save it
 	Then I reset my App
 
+@Android
 Scenario: As a logged in user I should be able to retrive saved Note
 	Given I going to login on Android
 	Then I should see my saved Note
