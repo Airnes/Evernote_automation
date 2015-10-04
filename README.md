@@ -41,7 +41,7 @@
 
 ##Environment:
 1. Open terminal and run ```gem install calabash-cucumber```
-2. Cd to the foler with *features* folder inside
+2. Cd to the project folder with *features* folder inside
 
 ###How to Run
 - Run ```RESET_BETWEEN_SCENARIOS=1 cucumber features/evernote.feature```
