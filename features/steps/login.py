@@ -15,6 +15,10 @@ from time import sleep
 
 use_step_matcher("re")
 
+userLogin = 'enterEmailAddress'
+userPass = 'EnterPassword'
+
+
 @given('user on the Welcome screen')
 def find_Sign_in_btn(context):
 	context.driver.is_app_installed('com.evernote')
@@ -32,8 +36,8 @@ def check_Login_fields(context):
 @When('I enter my Valid credentials')
 def entering_credentials(context):
 	textfields = context.driver.find_elements_by_class_name("android.widget.EditText")
-	textfields[0].send_keys("airnes@yandex.ru")
-	textfields[1].send_keys("Vfrfhjd57896")
+	textfields[0].send_keys(userLogin)
+	textfields[1].send_keys(userPass)
 
 @When('I touch Sing In button')
 def touch_Sign_in_Btn(context):	
@@ -53,8 +57,8 @@ def user_login_flow(context):
 	context.driver.find_element_by_name("SIGN IN").click()
 	context.driver.find_element_by_name("Username or Email")
 	textfields = context.driver.find_elements_by_class_name("android.widget.EditText")
-	textfields[0].send_keys("airnes@yandex.ru")
-	textfields[1].send_keys("Vfrfhjd57896")
+	textfields[0].send_keys(userLogin)
+	textfields[1].send_keys(userPass)
 	context.driver.find_element_by_name("Sign In").click()
 	sleep(45) #Should be functuon in Runtime to check if Message center screen appears
 	message_card = context.driver.find_element_by_id('com.evernote:id/message_card_layout')
@@ -67,9 +71,9 @@ def authenticate_btn_tap(context):
 @Then('I need to enter my credentials')
 def enter_iOS_credentials(context):
 	context.driver.find_element_by_class_name("UIATextField").click()
-	context.driver.find_element_by_class_name("UIATextField").send_keys("airnes@yandex.ru")
+	context.driver.find_element_by_class_name("UIATextField").send_keys(userLogin)
 	context.driver.find_element_by_class_name("UIASecureTextField").click()
-	context.driver.find_element_by_class_name("UIASecureTextField").send_keys("Vfrfhjd57896")
+	context.driver.find_element_by_class_name("UIASecureTextField").send_keys(userPass)
 	context.driver.execute_script('UIATarget.localTarget().frontMostApp().keyboard().buttons()["Go"].tap();');
 	sleep (5)
 	context.driver.find_element_by_xpath("//UIAApplication[1]/UIAWindow[1]/UIAScrollView[1]/UIAWebView[1]/UIAButton[1]").click() #Workaroud as Appium can't access to web element
@@ -81,9 +85,9 @@ def iOS_login_flow(context):
 	context.driver.find_element_by_id('Authenticate').click()
 	sleep (5) #wait for action in interface	
 	context.driver.find_element_by_class_name("UIATextField").click()
-	context.driver.find_element_by_class_name("UIATextField").send_keys("airnes@yandex.ru")
+	context.driver.find_element_by_class_name("UIATextField").send_keys(userLogin)
 	context.driver.find_element_by_class_name("UIASecureTextField").click()
-	context.driver.find_element_by_class_name("UIASecureTextField").send_keys("Vfrfhjd57896")
+	context.driver.find_element_by_class_name("UIASecureTextField").send_keys(userPass)
 	context.driver.execute_script('UIATarget.localTarget().frontMostApp().keyboard().buttons()["Go"].tap();');
 	sleep (5)
 	context.driver.find_element_by_xpath("//UIAApplication[1]/UIAWindow[1]/UIAScrollView[1]/UIAWebView[1]/UIAButton[1]").click() #Workaroud as Appium can't access to web element
