@@ -13,11 +13,11 @@ def before_feature(context,feature):
 	platform = context.config.userdata.get("platform", "")
 
 	if platform == 'iOS':
-		app = '/Users/Airness/Projects/Evernote_automation/apps/evernote.app'
+		app = '/Path/to/Evernote_automation/apps/evernote.app'
 		platformVersion = '8.4'
 		deviceName = 'iPhone 5'
 	else:
-		app = '/Users/Airness/Projects/Evernote_automation/apps/evernote.apk'
+		app = '/Path/to/Projects/Evernote_automation/apps/evernote.apk'
 		platformVersion = '5.1'
 		deviceName = 'Nexus5'
 	
